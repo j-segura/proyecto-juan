@@ -53,10 +53,7 @@ const inversa = (content) =>{
     let inversContent = [];
     for(let i = content.length; i > -1; i--){
         inversContent.push(content[i]);
-        if(inversContent.length == 4){
-            inversContent.push('.')
-        }
-        if(inversContent.length == 8){
+        if(inversContent.length % 4 == 0){
             inversContent.push('.')
         }
     }
@@ -80,6 +77,7 @@ op1.onclick = function(){
     nt = 0;
     nt = nt + 1000000;
     total.innerHTML = "$ " + inversa(`${nt}`);
+    next1.style.display = 'block';
 
     next1.onclick = function(){
         form1.style.left = '-1100px';
@@ -105,6 +103,7 @@ op2.onclick = function(){
     nt = 0;
     nt = nt + 1500000;
     total.innerHTML = "$ " + inversa(`${nt}`);
+    next1.style.display = 'block';
 
     next1.onclick = function(){
         form1.style.left = '-1100px';
@@ -123,94 +122,69 @@ op2.onclick = function(){
     }
 }
 
-/* logica del form2-linea1 */ 
+let temporal = 1000000 + nt;
+/* let seleccionado = true; */
 
-op1_p2.onclick = function(){
-    nt = 1000000;
-    nt = nt + 200000;
-    total.innerHTML = "$ " + inversa(`${nt}`);
-}
-op2_p2.onclick = function(){
-    nt = 1000000;
-    nt = nt + 300000;
-    total.innerHTML = "$ " + inversa(`${nt}`);
-}
-op3_p2.onclick = function(){
-    nt = 1000000;
-    nt = nt + 400000;
-    total.innerHTML = "$ " + inversa(`${nt}`);
-}
+$('.radio').click(
+    function(){
+        let valor = $(this).attr('data-valor');
+        let seleccionado = true;
+        nt = temporal;
+
+        if(seleccionado){
+            nt = nt + parseInt(valor);
+            $(total).html("$ " + inversa(`${nt}`));
+            seleccionado = false;
+        }
+
+    }
+);
+
+
 
 /* logica del form3-linea1 */ 
 
-var checkbox_form1 = document.getElementsByClassName('checkbox');
-
-/* checkbox_form1.onclick = function(){
-    alert('so lo estoy reconociendo');
-}
-
-if(checkbox_form1[0].checked == true){
-    total.innerHTML = 'hola mundo';
-}
- */
-
-$("checkbox").click(
+$('.checkbox').click(
     function(){
-        alert('dio click');
+        let valor = $(this).attr('data-valor');
+        let is_checked = $(this).prop('checked');
+        let btn = $(this).attr('data-btn');
+
+        if(is_checked){
+            nt = nt + parseInt(valor);
+            $(total).html("$ " + inversa(`${nt}`));
+            console.log('es checked');
+        } else {
+            nt = nt - parseInt(valor);
+            $(total).html("$ " + inversa(`${nt}`));
+            console.log('no es checked');
+        }
+
+        console.log(btn);
+
+        $(btn).show();
+        hidden_button(btn);
+
     }
-)
+);
 
 
+function hidden_button(btn_name){
 
-/* logica del form2-linea2 */ 
+    var checkeds = $('.ghost');
+    let is_checked = [];
 
-var op1_p2_form2 = document.getElementById('op1-p2-form2');
-var op2_p2_form2 = document.getElementById('op2-p2-form2');
+    $(checkeds).each((i, camp) => {
+        if($(camp).prop('checked')){
+            is_checked.push(i);
+        }
+    });
 
-op1_p2_form2.onclick = function(){
-    nt = 1500000;
-    nt = nt + 500000;
-    total.innerHTML = "$ " + inversa(`${nt}`);
-}
-op2_p2_form2.onclick = function(){
-    nt = 1500000;
-    nt = nt + 1000000;
-    total.innerHTML = "$ " + inversa(`${nt}`);
-}
-
-var nt_temporal = nt;
-
-/* logica del form3-linea2 */ 
-
-
-/* logica del form4-linea2 */ 
-
-var op1_p4_form2 = document.getElementById('op1-p4-form2');
-var op2_p4_form2 = document.getElementById('op2-p4-form2');
-
-
-
-var contador = 0;
-
-op1_p4_form2.onclick = function(){
-
-    if(contador == 0){
-        nt = nt + 200000;
-        total.innerHTML = "$ " + inversa(`${nt}`);
-        contador = 1;
-    }
-    
-}
-
-op2_p4_form2.onclick = function(){
-    if(contador == 1){
-        nt = nt - 200000;
-        total.innerHTML = "$ " + inversa(`${nt}`);
-        contador = 0;
-    }else{
-        nt = nt + 0;
-        total.innerHTML = "$ " + inversa(`${nt}`);
+    if(is_checked.length <= 0){
+        $(btn_name).hide();
     }
 }
+
+
 
 

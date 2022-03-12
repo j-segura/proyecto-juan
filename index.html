@@ -58,7 +58,7 @@
             </div>
             <div class="btn-box">
                 <button type="button" id="back" class="btn-anterior"></button>
-                <button type="button" id="next1" class="btn-siguiente">Siguiente</button>
+                <button type="button" hidden id="next1" class="btn-siguiente">Siguiente</button>
             </div>
         </form>
 
@@ -69,7 +69,7 @@
             <h3>2. ¿Qué tipo de página quieres tener?</h3>
             <div class="quest2-form1">
 
-                <input type="radio" name="pregunta2" id="op1-p2">
+                <input type="radio" name="pregunta2" id="op1-p2" class="radio" data-valor="200000">
                 <label for="op1-p2" class="op1-p2">
                     <div class="circulito2-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
                     <h4>Landing <br>page</h4>
                 </label>
 
-                <input type="radio" name="pregunta2" id="op2-p2">
+                <input type="radio" name="pregunta2" id="op2-p2" class="radio" data-valor="300000">
                 <label for="op2-p2" class="op2-p2">
                     <div class="circulito2-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
                     <h4>One page <br>(servicios)</h4>
                 </label>
 
-                <input type="radio" name="pregunta2" id="op3-p2">
+                <input type="radio" name="pregunta2" id="op3-p2" class="radio" data-valor="400000">
                 <label for="op3-p2" class="op3-p2">
                     <div class="circulito2-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +133,7 @@
 
                 <div class="fila1">
                 
-                    <input type="checkbox" name="checkbox_form1" id="checkbox_form1" class="checkbox" data-valor="100000">
+                    <input type="checkbox" name="checkbox_form1" id="checkbox_form1" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea1">
                     <label class="checkbox_form1" for="checkbox_form1">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +148,7 @@
                         <h4>Nosotros</h4>
                     </label>
     
-                    <input type="checkbox" name="checkbox_form1" id="checkbox2_form1" class="checkbox" data-valor="200000">
+                    <input type="checkbox" name="checkbox_form1" id="checkbox2_form1" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea1">
                     <label class="checkbox2_form1" for="checkbox2_form1">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +165,7 @@
                         <h4>Mis productos</h4>
                     </label>
     
-                    <input type="checkbox" name="checkbox_form1" id="checkbox3_form1">
+                    <input type="checkbox" name="checkbox_form1" id="checkbox3_form1" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea1">
                     <label class="checkbox3_form1" for="checkbox3_form1">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +185,7 @@
                 </div>
                 <div class="fila2">
 
-                    <input type="checkbox" name="checkbox_form1" id="checkbox4_form1">
+                    <input type="checkbox" name="checkbox_form1" id="checkbox4_form1" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea1">
                     <label class="checkbox4_form1" for="checkbox4_form1">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,7 +199,7 @@
                         <h4>Contacto</h4>
                     </label>
 
-                    <input type="checkbox" name="checkbox_form1" id="checkbox5_form1">
+                    <input type="checkbox" name="checkbox_form1" id="checkbox5_form1" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea1">
                     <label class="checkbox5_form1" for="checkbox5_form1">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -218,7 +218,7 @@
                         <h4>Blog</h4>
                     </label>
 
-                    <input type="checkbox" name="checkbox_form1" id="checkbox6_form1">
+                    <input type="checkbox" name="checkbox_form1" id="checkbox6_form1" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea1">
                     <label class="checkbox6_form1" for="checkbox6_form1">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -237,8 +237,8 @@
                 </div>
                 <div class="fila3">
 
-                    <input type="checkbox" name="checkbox_form1" id="checkbox7_form1">
-                    <label class="checkbox7_form1" for="checkbox7_form1">
+                    <input type="checkbox" name="checkbox_form1" id="checkbox7_form1" class="checkbox ghost" data-valor="100000">
+                    <label class="checkbox7_form1" for="checkbox7_form1" data-btn="#next3-linea1">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.9091 8.73109V9.50472C17.9081 11.3181 17.3209 13.0825 16.2351 14.5349C15.1494 15.9873 13.6232 17.0498 11.8843 17.5639C10.1454 18.0781 8.28682 18.0163 6.58584 17.3879C4.88485 16.7595 3.43258 15.598 2.44561 14.0768C1.45864 12.5556 0.989858 10.756 1.10917 8.94662C1.22848 7.1372 1.9295 5.41482 3.10768 4.03635C4.28585 2.65789 5.87806 1.6972 7.64683 1.29757C9.4156 0.897944 11.2662 1.08078 12.9225 1.81882" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -256,7 +256,7 @@
                         <h4>Tratamiento de datos personales</h4>
                     </label>
 
-                    <input type="checkbox" name="checkbox_form1" id="checkbox8_form1">
+                    <input type="checkbox" name="checkbox_form1" id="checkbox8_form1" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea1">
                     <label class="checkbox8_form1" for="checkbox8_form1">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,7 +278,7 @@
             </div>
             <div class="btn-box">
                 <button type="button" id="back2-linea1" class="btn-anterior">Anterior</button>
-                <button type="button" id="next3-linea1" class="btn-siguiente">Siguiente</button>
+                <button type="button" hidden id="next3-linea1" class="btn-siguiente">Siguiente</button>
             </div>
         </form>
 
@@ -287,25 +287,8 @@
             <h3>4. ¿Cuántos servicios o productos te gustaría incluir?</h3>
             <div class="quest4-form1">
 
-                <input type="radio" name="pregunta4" id="op1-p4">
+                <input type="radio" name="pregunta4" id="op1-p4" class="radio" data-valor="100000">
                 <label for="op1-p4" class="p4">
-                    <div class="circulito4-form1">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.9091 8.73109V9.50472C17.9081 11.3181 17.3209 13.0825 16.2351 14.5349C15.1494 15.9873 13.6232 17.0498 11.8843 17.5639C10.1454 18.0781 8.28682 18.0163 6.58584 17.3879C4.88485 16.7595 3.43258 15.598 2.44561 14.0768C1.45864 12.5556 0.989858 10.756 1.10917 8.94662C1.22848 7.1372 1.9295 5.41482 3.10768 4.03635C4.28585 2.65789 5.87806 1.6972 7.64683 1.29757C9.4156 0.897944 11.2662 1.08078 12.9225 1.81882" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M17.9091 2.77747L9.50004 11.195L6.97731 8.67224" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                    </div>
-                    <svg class="svg" width="58" height="58" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M31 2L2 16.5L31 31L60 16.5L31 2Z" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M2 45.5L31 60L60 45.5" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M2 31L31 45.5L60 31" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                                           
-                    <h4>5 -10</h4>
-                </label>
-
-                <input type="radio" name="pregunta4" id="op2-p4">
-                <label for="op2-p4" class="p4">
                     <div class="circulito4-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.9091 8.73109V9.50472C17.9081 11.3181 17.3209 13.0825 16.2351 14.5349C15.1494 15.9873 13.6232 17.0498 11.8843 17.5639C10.1454 18.0781 8.28682 18.0163 6.58584 17.3879C4.88485 16.7595 3.43258 15.598 2.44561 14.0768C1.45864 12.5556 0.989858 10.756 1.10917 8.94662C1.22848 7.1372 1.9295 5.41482 3.10768 4.03635C4.28585 2.65789 5.87806 1.6972 7.64683 1.29757C9.4156 0.897944 11.2662 1.08078 12.9225 1.81882" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -321,7 +304,24 @@
                     <h4>1 - 5</h4>
                 </label>
 
-                <input type="radio" name="pregunta4" id="op3-p4">
+                <input type="radio" name="pregunta4" id="op2-p4" class="radio" data-valor="200000">
+                <label for="op2-p4" class="p4">
+                    <div class="circulito4-form1">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.9091 8.73109V9.50472C17.9081 11.3181 17.3209 13.0825 16.2351 14.5349C15.1494 15.9873 13.6232 17.0498 11.8843 17.5639C10.1454 18.0781 8.28682 18.0163 6.58584 17.3879C4.88485 16.7595 3.43258 15.598 2.44561 14.0768C1.45864 12.5556 0.989858 10.756 1.10917 8.94662C1.22848 7.1372 1.9295 5.41482 3.10768 4.03635C4.28585 2.65789 5.87806 1.6972 7.64683 1.29757C9.4156 0.897944 11.2662 1.08078 12.9225 1.81882" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.9091 2.77747L9.50004 11.195L6.97731 8.67224" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+                    <svg class="svg" width="58" height="58" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M31 2L2 16.5L31 31L60 16.5L31 2Z" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 45.5L31 60L60 45.5" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 31L31 45.5L60 31" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                                           
+                    <h4>5 -10</h4>
+                </label>
+
+                <input type="radio" name="pregunta4" id="op3-p4" class="radio" data-valor="400000">
                 <label for="op3-p4" class="p4">
                     <div class="circulito4-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -430,7 +430,7 @@
 
                 <div class="fila1">
                 
-                    <input type="checkbox" name="checkbox_form2" id="checkbox_form2">
+                    <input type="checkbox" name="checkbox_form2" id="checkbox_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox_form1" for="checkbox_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -445,7 +445,7 @@
                         <h4>Nosotros</h4>
                     </label>
     
-                    <input type="checkbox" name="checkbox2_form2" id="checkbox2_form2">
+                    <input type="checkbox" name="checkbox2_form2" id="checkbox2_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox2_form1" for="checkbox2_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -462,7 +462,7 @@
                         <h4>Mis productos</h4>
                     </label>
     
-                    <input type="checkbox" name="checkbox3_form2" id="checkbox3_form2">
+                    <input type="checkbox" name="checkbox3_form2" id="checkbox3_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox3_form1" for="checkbox3_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -482,7 +482,7 @@
                 </div>
                 <div class="fila2">
 
-                    <input type="checkbox" name="checkbox4_form2" id="checkbox4_form2">
+                    <input type="checkbox" name="checkbox4_form2" id="checkbox4_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox4_form1" for="checkbox4_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -496,7 +496,7 @@
                         <h4>Contacto</h4>
                     </label>
 
-                    <input type="checkbox" name="checkbox5_form2" id="checkbox5_form2">
+                    <input type="checkbox" name="checkbox5_form2" id="checkbox5_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox5_form1" for="checkbox5_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -515,7 +515,7 @@
                         <h4>Blog</h4>
                     </label>
 
-                    <input type="checkbox" name="checkbox6_form2" id="checkbox6_form2">
+                    <input type="checkbox" name="checkbox6_form2" id="checkbox6_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox6_form1" for="checkbox6_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -534,7 +534,7 @@
                 </div>
                 <div class="fila3">
 
-                    <input type="checkbox" name="checkbox7_form2" id="checkbox7_form2">
+                    <input type="checkbox" name="checkbox7_form2" id="checkbox7_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox7_form1" for="checkbox7_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -553,8 +553,8 @@
                         <h4>Tratamiento de datos personales</h4>
                     </label>
 
-                    <input type="checkbox" name="checkbox8_form2" id="checkbox8_form2">
-                    <label class="checkbox8_form1" for="checkbox8_form2">
+                    <input type="checkbox" name="checkbox8_form2" id="checkbox8_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
+                    <label class="checkbox8_form1" for="checkbox8_form2" data-btn="#next3-linea2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.9091 8.73109V9.50472C17.9081 11.3181 17.3209 13.0825 16.2351 14.5349C15.1494 15.9873 13.6232 17.0498 11.8843 17.5639C10.1454 18.0781 8.28682 18.0163 6.58584 17.3879C4.88485 16.7595 3.43258 15.598 2.44561 14.0768C1.45864 12.5556 0.989858 10.756 1.10917 8.94662C1.22848 7.1372 1.9295 5.41482 3.10768 4.03635C4.28585 2.65789 5.87806 1.6972 7.64683 1.29757C9.4156 0.897944 11.2662 1.08078 12.9225 1.81882" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -574,7 +574,7 @@
 
                 <div class="fila4">
 
-                    <input type="checkbox" name="checkbox9_form2" id="checkbox9_form2">
+                    <input type="checkbox" name="checkbox9_form2" id="checkbox9_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox9_form2" for="checkbox9_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -592,7 +592,7 @@
                         <h4>Politicas de envío</h4>
                     </label>
 
-                    <input type="checkbox" name="checkbox10_form2" id="checkbox10_form2">
+                    <input type="checkbox" name="checkbox10_form2" id="checkbox10_form2" class="checkbox ghost" data-valor="100000" data-btn="#next3-linea2">
                     <label class="checkbox10_form2" for="checkbox10_form2">
                         <div class="circulito-checkbox">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -612,7 +612,7 @@
             </div>
             <div class="btn-box">
                 <button type="button" id="back2-linea2" class="btn-anterior">Anterior</button>
-                <button type="button" id="next3-linea2" class="btn-siguiente">Siguiente</button>
+                <button type="button" hidden id="next3-linea2" class="btn-siguiente">Siguiente</button>
             </div>
         </form>
 
