@@ -45,7 +45,7 @@ var op3_p2 = document.getElementById('op3-p2');
 
 var total = document.getElementById('total');
 
-var nt = 0;//el valor acumulado
+var totalGlobal = 0;//el valor acumulado
 
 
 //funcion que le coloca los puntos al precio
@@ -74,9 +74,9 @@ op1.onclick = function(){
     progress1.style.display = 'block';
     step_img1.style.left = '53px';
     step_img2.style.left = '1100px';
-    nt = 0;
-    nt = nt + 1000000;
-    total.innerHTML = "$ " + inversa(`${nt}`);
+    totalGlobal = 0;
+    totalGlobal += 1000000;
+    total.innerHTML = "$ " + inversa(`${totalGlobal}`);
     next1.style.display = 'block';
 
     next1.onclick = function(){
@@ -100,9 +100,9 @@ op2.onclick = function(){
     progress2.style.display = 'block';
     step_img2.style.left = '53px';
     step_img1.style.left = '1100px';
-    nt = 0;
-    nt = nt + 1500000;
-    total.innerHTML = "$ " + inversa(`${nt}`);
+    totalGlobal = 0;
+    totalGlobal += 1500000;
+    total.innerHTML = "$ " + inversa(`${totalGlobal}`);
     next1.style.display = 'block';
 
     next1.onclick = function(){
@@ -122,27 +122,154 @@ op2.onclick = function(){
     }
 }
 
-let temporal = 1000000 + nt;
-/* let seleccionado = true; */
+//radios pregunta 2 linia 1
 
-$('.radio').click(
+let data = 0;
+let contador = 0;
+
+$('.pregunta2-l1').click(
     function(){
         let valor = $(this).attr('data-valor');
-        let seleccionado = true;
-        nt = temporal;
 
-        if(seleccionado){
-            nt = nt + parseInt(valor);
-            $(total).html("$ " + inversa(`${nt}`));
-            seleccionado = false;
+        if(contador > 0){
+            totalGlobal = totalGlobal - parseInt(data);
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data = valor;
+        }else{
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data = valor;
+            contador++;
         }
 
+        $('#next2-linea1').show()
     }
 );
 
+//radios pregunta 4 linia 1
 
+let data2 = 0;
+let contador2 = 0;
 
-/* logica del form3-linea1 */ 
+$('.pregunta4-l1').click(
+    function(){
+        let valor = $(this).attr('data-valor');
+
+        if(contador2 > 0){
+            totalGlobal = totalGlobal - parseInt(data2);
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data2 = valor;
+        }else{
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data2 = valor;
+            contador2++;
+        }
+
+        $('#next4-linea1').show();
+    }
+);
+
+//radios predunta 2 linia 2
+let data3 = 0;
+let contador3 = 0;
+
+$('.pregunta2-l2').click(
+    function(){
+        let valor = $(this).attr('data-valor');
+
+        if(contador3 > 0){
+            totalGlobal = totalGlobal - parseInt(data3);
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data3 = valor;
+        }else{
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data3 = valor;
+            contador3++;
+        }
+
+        $('#next2-linea2').show();
+    }
+);
+
+//radios pregunta 4 linia 2
+
+let data4 = 0;
+let contador4 = 0;
+
+$('.pregunta4-l2').click(
+    function(){
+        let valor = $(this).attr('data-valor');
+
+        if(contador4 > 0){
+            totalGlobal = totalGlobal - parseInt(data4);
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data4 = valor;
+        }else{
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data4 = valor;
+            contador4++;
+        }
+
+        $('#next4-linea2').show();
+    }
+);
+
+//radios pregunta 5 linia 2
+
+let data5 = 0;
+let contador5 = 0;
+
+$('.pregunta5-l2').click(
+    function(){
+        let valor = $(this).attr('data-valor');
+
+        if(contador5 > 0){
+            totalGlobal = totalGlobal - parseInt(data5);
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data5 = valor;
+        }else{
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data5 = valor;
+            contador5++;
+        }
+
+        $('#next5-linea2').show();
+    }
+);
+
+//radios pregunta 6 linia 2
+
+let data6 = 0;
+let contador6 = 0;
+
+$('.pregunta6-l2').click(
+    function(){
+        let valor = $(this).attr('data-valor');
+
+        if(contador6 > 0){
+            totalGlobal = totalGlobal - parseInt(data6);
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data6 = valor;
+        }else{
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
+            data6 = valor;
+            contador6++;
+        }
+
+        $('#next6-linea2').show();
+    }
+);
 
 $('.checkbox').click(
     function(){
@@ -151,23 +278,17 @@ $('.checkbox').click(
         let btn = $(this).attr('data-btn');
 
         if(is_checked){
-            nt = nt + parseInt(valor);
-            $(total).html("$ " + inversa(`${nt}`));
-            console.log('es checked');
+            totalGlobal += parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
         } else {
-            nt = nt - parseInt(valor);
-            $(total).html("$ " + inversa(`${nt}`));
-            console.log('no es checked');
+            totalGlobal -= parseInt(valor);
+            $(total).html("$ " + inversa(`${totalGlobal}`));
         }
-
-        console.log(btn);
 
         $(btn).show();
         hidden_button(btn);
-
     }
 );
-
 
 function hidden_button(btn_name){
 
