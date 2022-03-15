@@ -143,7 +143,7 @@ $('.pregunta2-l1').click(
             contador++;
         }
 
-        $('#next2-linea1').show()
+        $('#next2-linea1').show();
     }
 );
 
@@ -285,7 +285,6 @@ $('.checkbox').click(
             $(total).html("$ " + inversa(`${totalGlobal}`));
         }
 
-        $(btn).show();
         hidden_button(btn);
     }
 );
@@ -303,8 +302,31 @@ function hidden_button(btn_name){
 
     if(is_checked.length <= 0){
         $(btn_name).hide();
+    }else{
+        $(btn_name).show();
     }
 }
+
+//esta funcion resetea el formulario
+$('.btn-reset').click(function(){
+    $('.reset').prop('checked', false);
+    data = 0;
+    data2 = 0;
+    data3 = 0;
+    data4 = 0;
+    data5 = 0;
+    data6 = 0;
+
+    $('#next2-linea1').hide();
+    $('#next3-linea1').hide();
+    $('#next4-linea1').hide();
+
+    $('#next2-linea2').hide();
+    $('#next3-linea2').hide();
+    $('#next4-linea2').hide();
+    $('#next5-linea2').hide();
+    $('#next6-linea2').hide();
+});
 
 
 
