@@ -125,23 +125,15 @@ op2.onclick = function(){
 //radios pregunta 2 linia 1
 
 let data = 0;
-let contador = 0;
 
 $('.pregunta2-l1').click(
     function(){
         let valor = $(this).attr('data-valor');
 
-        if(contador > 0){
-            totalGlobal = totalGlobal - parseInt(data);
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data = valor;
-        }else{
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data = valor;
-            contador++;
-        }
+        totalGlobal = totalGlobal - parseInt(data);
+        totalGlobal += parseInt(valor);
+        $(total).html("$ " + inversa(`${totalGlobal}`));
+        data = valor;
 
         $('#next2-linea1').show();
     }
@@ -150,23 +142,35 @@ $('.pregunta2-l1').click(
 //radios pregunta 4 linia 1
 
 let data2 = 0;
-let contador2 = 0;
+let valorCuantos = 0;
+
+$('#cuantos').change(function(){
+
+    valorCuantos = $('#cuantos').val() * 20000;
+    totalGlobal = totalGlobal - parseInt(data2);
+    totalGlobal += valorCuantos;
+    $(total).html("$ " + inversa(`${totalGlobal}`));
+    data2 = valorCuantos;
+
+});
+
 
 $('.pregunta4-l1').click(
     function(){
+        let id = $(this).attr('id');
         let valor = $(this).attr('data-valor');
 
-        if(contador2 > 0){
-            totalGlobal = totalGlobal - parseInt(data2);
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data2 = valor;
-        }else{
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data2 = valor;
-            contador2++;
+        if(!id === 'op4-p4'){
+            $('#cuantos').val() = 20;
         }
+        
+
+        totalGlobal = totalGlobal - parseInt(data2);
+        totalGlobal += parseInt(valor);
+        $(total).html("$ " + inversa(`${totalGlobal}`));
+        data2 = valor; 
+
+        console.log(data2);
 
         $('#next4-linea1').show();
     }
@@ -174,23 +178,16 @@ $('.pregunta4-l1').click(
 
 //radios predunta 2 linia 2
 let data3 = 0;
-let contador3 = 0;
+
 
 $('.pregunta2-l2').click(
     function(){
         let valor = $(this).attr('data-valor');
 
-        if(contador3 > 0){
-            totalGlobal = totalGlobal - parseInt(data3);
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data3 = valor;
-        }else{
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data3 = valor;
-            contador3++;
-        }
+        totalGlobal = totalGlobal - parseInt(data3);
+        totalGlobal += parseInt(valor);
+        $(total).html("$ " + inversa(`${totalGlobal}`));
+        data3 = valor;
 
         $('#next2-linea2').show();
     }
@@ -199,23 +196,15 @@ $('.pregunta2-l2').click(
 //radios pregunta 4 linia 2
 
 let data4 = 0;
-let contador4 = 0;
 
 $('.pregunta4-l2').click(
     function(){
         let valor = $(this).attr('data-valor');
 
-        if(contador4 > 0){
-            totalGlobal = totalGlobal - parseInt(data4);
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data4 = valor;
-        }else{
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data4 = valor;
-            contador4++;
-        }
+        totalGlobal = totalGlobal - parseInt(data4);
+        totalGlobal += parseInt(valor);
+        $(total).html("$ " + inversa(`${totalGlobal}`));
+        data4 = valor;
 
         $('#next4-linea2').show();
     }
@@ -224,23 +213,15 @@ $('.pregunta4-l2').click(
 //radios pregunta 5 linia 2
 
 let data5 = 0;
-let contador5 = 0;
 
 $('.pregunta5-l2').click(
     function(){
         let valor = $(this).attr('data-valor');
 
-        if(contador5 > 0){
-            totalGlobal = totalGlobal - parseInt(data5);
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data5 = valor;
-        }else{
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data5 = valor;
-            contador5++;
-        }
+        totalGlobal = totalGlobal - parseInt(data5);
+        totalGlobal += parseInt(valor);
+        $(total).html("$ " + inversa(`${totalGlobal}`));
+        data5 = valor;
 
         $('#next5-linea2').show();
     }
@@ -249,23 +230,31 @@ $('.pregunta5-l2').click(
 //radios pregunta 6 linia 2
 
 let data6 = 0;
-let contador6 = 0;
+let valorCuantos2 = 0;
+
+$('#cuantos2').change(function(){
+
+    valorCuantos2 = $('#cuantos2').val() * 20000;
+    totalGlobal = totalGlobal - parseInt(data6);
+    totalGlobal += valorCuantos2;
+    $(total).html("$ " + inversa(`${totalGlobal}`));
+    data6 = valorCuantos2;
+
+});
 
 $('.pregunta6-l2').click(
     function(){
         let valor = $(this).attr('data-valor');
+        let id = $(this).attr('id');
 
-        if(contador6 > 0){
-            totalGlobal = totalGlobal - parseInt(data6);
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data6 = valor;
-        }else{
-            totalGlobal += parseInt(valor);
-            $(total).html("$ " + inversa(`${totalGlobal}`));
-            data6 = valor;
-            contador6++;
+        if(!id === 'op4-p6'){
+            $('#cuantos2').val() = 20;
         }
+
+        totalGlobal = totalGlobal - parseInt(data6);
+        totalGlobal += parseInt(valor);
+        $(total).html("$ " + inversa(`${totalGlobal}`));
+        data6 = valor;
 
         $('#next6-linea2').show();
     }
@@ -330,4 +319,20 @@ $('.btn-reset').click(function(){
 
 
 
+
+/* si (masVeinte esta check){
+    datavalor de masVeinte sea igual al valor de lo que se ingrese en la input number x 20.000
+}sino{
+    la imput sera igual a 0
+}
+
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('input[type=number]').forEach( node => node.addEventListener('keypress', e => {
+      if(e.keyCode == 13) {
+        e.preventDefault();
+      }
+    }))
+  });
 
