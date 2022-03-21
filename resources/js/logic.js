@@ -129,12 +129,15 @@ let data = 0;
 $('.pregunta2-l1').click(
     function(){
         let valor = $(this).attr('data-valor');
+        let tipo = $(this).attr('value');
 
         totalGlobal = totalGlobal - parseInt(data);
         totalGlobal += parseInt(valor);
         $(total).html("$ " + inversa(`${totalGlobal}`));
         data = valor;
-
+        console.log(tipo);
+        
+        $('#tipo').html(tipo);
         $('#next2-linea1').show();
     }
 );
@@ -151,6 +154,7 @@ $('#cuantos').change(function(){
     totalGlobal += valorCuantos;
     $(total).html("$ " + inversa(`${totalGlobal}`));
     data2 = valorCuantos;
+    $('#num-products').html($('#cuantos').val());
 
 });
 
@@ -172,6 +176,7 @@ $('.pregunta4-l1').click(
 
         console.log(data2);
 
+        $('#num-products').html($(this).val());
         $('#next4-linea1').show();
     }
 );
@@ -295,6 +300,21 @@ function hidden_button(btn_name){
         $(btn_name).show();
     }
 }
+
+$('#next3-linea1').click(function(){
+    var checkeds = $('.valores');
+    let is_checked = [];
+
+    $(checkeds).each((i, camp) => {
+        if($(camp).prop('checked')){
+            is_checked.push($(camp).val());
+        }
+    });
+
+    console.log(is_checked);
+
+    $('#internas').html(is_checked.join(", "));
+});
 
 //esta funcion resetea el formulario
 $('.btn-reset').click(function(){

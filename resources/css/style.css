@@ -116,7 +116,7 @@ h3 {
   left: 1100px;
 }
 
-#form5-linea1 .resumen {
+#form5-linea1 .r {
   font-family: Quicksand;
   font-style: normal;
   font-weight: 500;
@@ -124,6 +124,23 @@ h3 {
   line-height: 35px;
   text-align: center;
   color: #6c1c81;
+}
+
+.resumen {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #4B4B4B;
+
+  position: absolute;
+  bottom: 133px;
+  left: 50px;
+  height: 177px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* formularios de la linea 2 */
@@ -152,7 +169,7 @@ h3 {
   left: 1100px;
 }
 
-#form7-linea2 .resumen {
+#form7-linea2 .r {
   font-family: Quicksand;
   font-style: normal;
   font-weight: 500;
