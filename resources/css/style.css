@@ -1222,5 +1222,9 @@ input[type="radio"]:checked + label .number {
   max-width: 1px;
 }
 
+.color {
+  color: rgb(253, 107, 107);
+}
+
 
 

@@ -266,6 +266,7 @@ $('.pregunta6-l2').click(
         data6 = valor;
 
         $('#next6-linea2').show();
+        $('#num-products2').html($(this).val());
     }
 );
 

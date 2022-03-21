@@ -338,7 +338,7 @@
                     <h4>10 - 20</h4>
                 </label>
 
-                <input type="radio" name="pregunta4" id="op4-p4" class="pregunta4-l1 reset" data-valor="400000">
+                <input type="radio" name="pregunta4" id="op4-p4" class="pregunta4-l1 reset" data-valor="400000" value="">
                 <label for="op4-p4" class="p4">
                     <div class="circulito4-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -710,7 +710,7 @@
             <h3>6. ¿Cuántos servicios o productos te gustaría incluir?</h3>
             <div class="quest4-form1">
 
-                <input type="radio" name="pregunta6" id="op1-p6" class="pregunta6-l2 reset" data-valor="100000">
+                <input type="radio" name="pregunta6" id="op1-p6" class="pregunta6-l2 reset" data-valor="100000" value="1 - 5">
                 <label for="op1-p6" class="p4">
                     <div class="circulito4-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -727,7 +727,7 @@
                     <h4>1 - 5</h4>
                 </label>
 
-                <input type="radio" name="pregunta6" id="op2-p6" class="pregunta6-l2 reset" data-valor="200000">
+                <input type="radio" name="pregunta6" id="op2-p6" class="pregunta6-l2 reset" data-valor="200000" value="5 - 10">
                 <label for="op2-p6" class="p4">
                     <div class="circulito4-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -744,7 +744,7 @@
                     <h4>5 - 10</h4>
                 </label>
 
-                <input type="radio" name="pregunta6" id="op3-p6" class="pregunta6-l2 reset" data-valor="400000">
+                <input type="radio" name="pregunta6" id="op3-p6" class="pregunta6-l2 reset" data-valor="400000" value="10 - 20">
                 <label for="op3-p6" class="p4">
                     <div class="circulito4-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -761,7 +761,7 @@
                     <h4>10 - 20</h4>
                 </label>
 
-                <input type="radio" name="pregunta6" id="op4-p6" class="pregunta6-l2 reset" data-valor="400000">
+                <input type="radio" name="pregunta6" id="op4-p6" class="pregunta6-l2 reset" data-valor="400000" value="20">
                 <label for="op4-p6" class="p4">
                     <div class="circulito4-form1">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -917,19 +917,19 @@
         <p>Completa tus datos para recibir cotización oficial</p>
         <form action="">
 
-            <label for="nombre">¿Cuál es tu nombre?*</label>
-            <input type="text" id="nombre" placeholder="Escribe tu nombre">
+            <label for="nombre">¿Cuál es tu nombre? <span class="color">*</span></label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
 
-            <label for="apellido">¿Cuáles son tus apellidos?*</label>
-            <input type="text" id="apellido" placeholder="Escribe tus apellidos">
+            <label for="apellido">¿Cuáles son tus apellidos? <span class="color">*</span></label>
+            <input type="text" id="apellido" placeholder="Escribe tus apellidos" required>
 
-            <label for="correo">¿Cuál es tu correo?*</label>
-            <input type="text" id="correo" placeholder="Escribe tu correo electrónico">
+            <label for="correo">¿Cuál es tu correo? <span class="color">*</span></label>
+            <input type="text" id="correo" placeholder="Escribe tu correo electrónico" required>
 
-            <label for="ciudad">¿Cuál es tu ciudad?*</label>
-            <input type="text" id="ciudad" placeholder="Escoge tu ciudad de residencia">
+            <label for="ciudad">¿Cuál es tu ciudad? <span class="color">*</span></label>
+            <input type="text" id="ciudad" placeholder="Escoge tu ciudad de residencia" required>
 
-            <input type="checkbox" id="terminos">
+            <input type="checkbox" id="terminos" required>
             <label for="terminos" class="terminos">
                 Al enviar este formulario, acepto que mis datos sean usados por Evendi S.A.S y la marca Nilo App para ponerse en contacto conmigo en el marco de esta promoción y campañas asociadas.
             </label>
